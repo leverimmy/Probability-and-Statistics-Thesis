@@ -90,7 +90,7 @@ $w_i \in \sigma(s_i), \forall i \in\{1, 2, \cdots, n\}$，
 
 \subsection{公式推导}
 
-根据条件概率的定义，我们有
+由隐马尔可夫模型 \cite{HMM}，根据条件概率的定义，我们有
 \begin{align*}
 \ln P(w_1 w_2 ... w_{n}) & = \ln P(w_1) + \ln P(w_2 \mid  w_1) + \ln P(w_3 \mid  w_1 w_2)
         + \cdots + \ln P(w_n \mid  w_1 w_2 \cdots w_{n-1}) \\
@@ -181,7 +181,7 @@ $P(\kaishu\text{动物}\mid w_3)$ 最大。由于$\kaishu\text{园}$能使该概
         \draw[->] (W_n3) -- (T);
 
     \end{tikzpicture}
-    \caption{有向无环图}
+    \caption{有向无环图 \cite{DAG}}
 \end{figure}
 
 建图如下：其中 $w_0$ 为虚拟源点，$w_{n+1}$ 为虚拟汇点。
@@ -201,7 +201,7 @@ $P(\kaishu\text{动物}\mid w_3)$ 最大。由于$\kaishu\text{园}$能使该概
 
 \subsection{动态规划求解}
 
-DAG 上最短路可以使用动态规划的思想来解决。设 $f(i, j)$ 表示从 $w_0$ 开始，到达 $w_{i, \cdot}$ 这一层对应的 $w_{i, j}$ 所需边权和的最小值。
+DAG 上最短路可以使用动态规划 \cite{DynamicProgramming} 的思想来解决。设 $f(i, j)$ 表示从 $w_0$ 开始，到达 $w_{i, \cdot}$ 这一层对应的 $w_{i, j}$ 所需边权和的最小值。
 则对于某一点 $w_{i, j}$ 而言，可以枚举它从上一层的哪一个点 $w_{i-1, k}$ 转移过来，
 即可得到状态转移方程：
 \begin{equation*}
@@ -238,7 +238,7 @@ f(i, j) = \max_{k \le \left|\sigma(s_{i - 1})\right|}(f(i - 1, k) + \text{cost}(
 \end{table}
 实验效果较为理想。由于三元模型比二元模型复杂，所以对应的两种准确率均更高；
 而模型的复杂性也会导致所用计算时间更长，使得响应时长更长。
-具体代码和实验数据已上传并开源于 \url{https://github.com/LeverImmy/Probability-and-Statistics-Thesis}。
+具体代码和实验数据已上传并开源于 \cite{Pinyin}。
 
 \section{总结}
 
@@ -253,5 +253,25 @@ f(i, j) = \max_{k \le \left|\sigma(s_{i - 1})\right|}(f(i - 1, k) + \text{cost}(
 课程中是一个非常重要的概念；解决拼音输入法这个问题也很有意义，
 因为拼音输入法是我们日常生活中不可或缺的一部分。
 我通过利用课上学到的知识，将这两者结合起来，这让我感到非常有成就感。
+
+\begin{thebibliography}{9}
+    \bibitem{HMM}
+    \emph{Hidden Markov model - Wikipedia},
+    2024,
+    \url{https://en.wikipedia.org/wiki/Hidden_Markov_model}.
+    \bibitem{DAG}
+    \emph{Directed acyclic graph - Wikipedia},
+    2024,
+    \url{https://en.wikipedia.org/wiki/Directed_acyclic_graph}.
+    \bibitem{DynamicProgramming}
+    \emph{Dynamic programming - Wikipedia},
+    2024,
+    \url{https://en.wikipedia.org/wiki/Dynamic_programming}.
+    \bibitem{Pinyin}
+    Ze-en Xiong,
+    \emph{LeverImmy/Probability-and-Statistics-Thesis · GitHub},
+    2024,
+    \url{https://github.com/LeverImmy/Probability-and-Statistics-Thesis/}.
+\end{thebibliography}
 
 \end{document}
