@@ -55,11 +55,11 @@ Probability-and-Statistics-Thesis/
         thesis.toc
 ```
 
-其中 `Probability-and-Statistics-Thesis/data` 文件夹可以从 [GitHub Release](https://github.com/LeverImmy/Introduction-to-Artificial-Intelligence/releases/download/Pinyin/data.zip) 中下载得到，或是通过将下发文件按照上图结构进行放置而得到：图中的 `1st_2nd_order_characters.txt` 即为下发文件中的 `一二级汉字表.txt`，`pinyin2word_all.txt` 即为下发文件中的 `拼音汉字表.txt`。
+其中 `Probability-and-Statistics-Thesis/data` 文件夹可以从 [GitHub Release](https://github.com/LeverImmy/Probability-and-Statistics-Thesis/releases/download/data/data.zip) 中下载得到，或是通过将下发文件按照上图结构进行放置而得到：图中的 `1st_2nd_order_characters.txt` 即为下发文件中的 `一二级汉字表.txt`，`pinyin2word_all.txt` 即为下发文件中的 `拼音汉字表.txt`。
 
 ### 运行方式
 
-假设当前处于 `Pinyin/Hand-in/src` 文件夹下：
+假设当前处于 `Probability-and-Statistics-Thesis/src` 文件夹下：
 
 - 对数据进行预处理：
 
@@ -84,4 +84,3 @@ Probability-and-Statistics-Thesis/
   ```
 
   该命令将会以对比的形式，展示输出与标准答案不同的部分，同时统计句正确率、字正确率、平均单次响应时长和总响应时长。
-

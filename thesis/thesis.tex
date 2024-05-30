@@ -238,7 +238,7 @@ f(i, j) = \max_{k \le \left|\sigma(s_{i - 1})\right|}(f(i - 1, k) + \text{cost}(
 \end{table}
 实验效果较为理想。由于三元模型比二元模型复杂，所以对应的两种准确率均更高；
 而模型的复杂性也会导致所用计算时间更长，使得响应时长更长。
-代码实现和实验数据已上传并开源于 \cite{Pinyin}。
+具体代码和实验数据已上传并开源于 \url{https://github.com/LeverImmy/Probability-and-Statistics-Thesis}。
 
 \section{总结}
 
@@ -249,16 +249,9 @@ f(i, j) = \max_{k \le \left|\sigma(s_{i - 1})\right|}(f(i - 1, k) + \text{cost}(
 事实上，部分自然语言处理问题背后的原理与拼音输入法问题类似，本质上都是在已确定输出的前 $i$ 个 token
 的情况下，预测第 $i+1$ 个 token 的概率分布，并输出概率最大的 token。
 
-我觉得这个问题的解决方法还是比较有意义的，因为拼音输入法是我们日常生活中不可或缺的一部分，
-概率论与数理统计的知识也是非常重要的。我通过利用课上学到的知识，将这两者结合起来，
-解决了一个实际问题，这让我感到非常有成就感。
-
-\begin{thebibliography}{9}
-    \bibitem{Pinyin}
-    Ze-en Xiong,
-    \emph{IAI\_2022/homework/connect-4 at main · zhaochenyang20/IAI\_2022 · GitHub},
-    2022,
-    \url{https://github.com/zhaochenyang20/IAI_2022/tree/main/homework/connect-4}.
-\end{thebibliography}
+我觉得这个问题的解决方法比较有启发性，因为条件概率在《概率论与数理统计》
+课程中是一个非常重要的概念；解决拼音输入法这个问题也很有意义，
+因为拼音输入法是我们日常生活中不可或缺的一部分。
+我通过利用课上学到的知识，将这两者结合起来，这让我感到非常有成就感。
 
 \end{document}
